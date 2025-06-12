@@ -17,10 +17,10 @@
     z-index: -1;
 
     background: linear-gradient(
-    45deg,
-    var(--sumi-ink),
-    var(--ronin-gray),
-    var(--dragon-blue)
+        45deg,
+        var(--sumi-ink),
+        var(--ronin-gray),
+        var(--dragon-blue)
     );
     background-size: 400% 400%;
     animation: gradient-aurora 18s ease-in-out infinite;
@@ -38,8 +38,7 @@
     line-height: 1.2;
 }
 
-.hero-headline::after {
-    content: ".";
+.hero-headline .react-type-animation-cursor {
     color: var(--carp-yellow);
 }
 
@@ -67,14 +66,90 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-headline,
+.hero-subheadline,
+.hero-cta-button
+.hero-socials {
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.hero-subheadline {
+    animation-delay: 0.2s;
+}
+
+.hero-cta-button {
+    animation-delay: 0.4s;
+}
+
+.hero-socials {
+    animation-delay: 0.6s;
+}
+
+.hero-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.hero-socials a svg {
+    width: 28px;
+    height: 28px;
+    color: var(--old-white);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.hero-socials a svg:hover {
+    color: var(--dragon-blue);
+    transform: translateY(-2px);
+}
+
+.scroll-down-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--old-white);
+    width: 32px;
+    height: 32px;
+    animation: bounce 2.5s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+    40% {
+        transform: translate(-50%, -15px);
+    }
+    60% {
+        transform: translate(-50%, -5px);
+    }
+}
+
 @keyframes gradient-aurora {
     0% {
-        background-position: 0 50%;
+        background-position: 0% 50%;
     }
     50% {
         background-position: 100% 50%;
     }
     100% {
-        background-position: 0 50%;
+        background-position: 0% 50%;
     }
 }
