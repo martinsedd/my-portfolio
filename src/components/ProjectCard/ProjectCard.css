@@ -1,3 +1,4 @@
+/* src/components/ProjectCard/ProjectCard.css */
 .project-card {
     background-color: var(--ronin-gray);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -7,6 +8,7 @@
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
+    cursor: pointer; /* Make it feel clickable */
 }
 
 .project-card:hover {
@@ -50,7 +52,10 @@
 }
 
 .project-link {
-    display: inline-block;
+    /* Updated for icons */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     text-decoration: none;
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
@@ -58,6 +63,12 @@
     transition: all 0.3s ease;
     border: 1px solid transparent;
     text-align: center;
+}
+
+/* NEW: Icon styles */
+.project-link svg {
+    width: 18px;
+    height: 18px;
 }
 
 .project-link.primary {
