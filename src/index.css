@@ -1,0 +1,28 @@
+:root {
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+    --sumi-ink: #1F1F28;
+    --fuji-white: #DCD7BA;
+    --old-white: #C8C093;
+    --dragon-blue: #7AA2F7;
+    --carp-yellow: #E0AF68;
+    --ronin-gray: #393552;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family), serif;
+    background-color: var(--sumi-ink);
+    color: var(--fuji-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    scroll-behavior: smooth;
+}

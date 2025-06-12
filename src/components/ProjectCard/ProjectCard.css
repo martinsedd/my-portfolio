@@ -1,0 +1,78 @@
+.project-card {
+    background-color: var(--ronin-gray);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-title {
+    color: var(--fuji-white);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    color: var(--old-white);
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-pill {
+    background-color: rgba(122, 162, 247, 0.15);
+    color: var(--dragon-blue);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+.project-link.primary {
+    background-color: var(--dragon-blue);
+    color: var(--sumi-ink);
+    border-color: var(--dragon-blue);
+}
+
+.project-link.secondary {
+    background-color: transparent;
+    color: var(--fuji-white);
+    border-color: var(--ronin-gray);
+}
+
+.project-link.secondary:hover {
+    background-color: var(--ronin-gray);
+    border-color: var(--ronin-gray);
+}
