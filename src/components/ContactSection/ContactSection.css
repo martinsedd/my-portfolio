@@ -1,3 +1,4 @@
+/* src/components/ContactSection/ContactSection.css */
 .contact-section {
     padding: 4rem 2rem;
     background-color: var(--sumi-ink);
@@ -69,13 +70,62 @@
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    /* NEW: Added for icon alignment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: 180px; /* Give it a fixed width to prevent size changes */
 }
 
-.submit-button:hover {
+.submit-button:hover:not(:disabled) {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* --- NEW: Styles for different form states --- */
+.submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(31, 31, 40, 0.3);
+    border-top-color: var(--sumi-ink);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.success-message {
+    padding: 2rem;
+    border: 1px solid var(--dragon-blue);
+    border-radius: 12px;
+    background-color: rgba(122, 162, 247, 0.1);
+}
+.success-message h3 {
+    color: var(--fuji-white);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.success-message p {
+    color: var(--old-white);
+    font-size: 1.1rem;
+}
+
+.error-message {
+    color: #f77aa2; /* A reddish color from the Kanagawa palette */
+    font-weight: 500;
+}
+
+/* Responsive adjustment for smaller screens */
 @media (max-width: 600px) {
     .form-group {
         flex-direction: column;
