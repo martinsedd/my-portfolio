@@ -1,7 +1,5 @@
-// src/components/Footer/Footer.tsx
 import "./Footer.css";
 
-// --- #3: Define SVG icons as components for reusability ---
 const GitHubIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +22,6 @@ const LinkedInIcon = () => (
   </svg>
 );
 
-// --- #3: Create data structure for social links ---
 const socialLinksData = [
   {
     href: "https://github.com/martinsedd",
@@ -58,7 +55,6 @@ const Footer = () => {
       </div>
       <p className="copyright-text">
         © {currentYear} Eduardo Martins. All Rights Reserved.
-        {/* --- #1: Add "Back to Top" link --- */}
         <a href="#home" className="back-to-top" aria-label="Back to top">
           &uarr;
         </a>

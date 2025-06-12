@@ -1,14 +1,11 @@
-/* src/components/Footer/Footer.css */
 
 .footer {
     padding: 2rem;
     text-align: center;
     background-color: var(--sumi-ink);
-    position: relative; /* Required for the pseudo-element */
-    /* The border-top is now handled by the ::before pseudo-element */
+    position: relative;
 }
 
-/* --- #5: Enhanced Visual Separator --- */
 .footer::before {
     content: "";
     position: absolute;
@@ -48,14 +45,12 @@
 .copyright-text {
     color: var(--old-white);
     font-size: 0.9rem;
-    /* NEW: Added for alignment with the back-to-top link */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
 
-/* --- #1: Styles for Back to Top link --- */
 .back-to-top {
     color: var(--old-white);
     text-decoration: none;

@@ -1,4 +1,3 @@
-// src/components/ProjectsSection/ProjectsSection.tsx
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects, type Project } from "../../data/projects";

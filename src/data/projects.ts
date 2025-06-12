@@ -12,15 +12,15 @@ export const projects: Project[] = [
     description:
       "A scalable REST API for a social media application. Features user authentication, real-time notifications with WebSockets, and a PostgreSQL database.",
     techStack: ["NestJS", "TypeScript", "PostgreSQL", "Docker", "JWT"],
-    liveLink: "#", // Replace with your live link or remove if not applicable
-    sourceLink: "#", // Replace with your GitHub link
+    liveLink: "#",
+    sourceLink: "#",
   },
   {
     title: "Project Beta",
     description:
       "A high-performance data processing service built with Java. It consumes messages from a Kafka queue, processes them, and stores the results in a NoSQL database.",
     techStack: ["Java", "Spring Boot", "Kafka", "MongoDB", "JUnit"],
-    sourceLink: "#", // Replace with your GitHub link
+    sourceLink: "#",
   },
   {
     title: "Project Gamma",
@@ -35,15 +35,15 @@ export const projects: Project[] = [
     description:
       "A scalable REST API for a social media application. Features user authentication, real-time notifications with WebSockets, and a PostgreSQL database.",
     techStack: ["NestJS", "TypeScript", "PostgreSQL", "Docker", "JWT"],
-    liveLink: "#", // Replace with your live link or remove if not applicable
-    sourceLink: "#", // Replace with your GitHub link
+    liveLink: "#",
+    sourceLink: "#",
   },
   {
     title: "Project Beta",
     description:
       "A high-performance data processing service built with Java. It consumes messages from a Kafka queue, processes them, and stores the results in a NoSQL database.",
     techStack: ["Java", "Spring Boot", "Kafka", "MongoDB", "JUnit"],
-    sourceLink: "#", // Replace with your GitHub link
+    sourceLink: "#",
   },
   {
     title: "Project Gamma",
@@ -58,15 +58,15 @@ export const projects: Project[] = [
     description:
       "A scalable REST API for a social media application. Features user authentication, real-time notifications with WebSockets, and a PostgreSQL database.",
     techStack: ["NestJS", "TypeScript", "PostgreSQL", "Docker", "JWT"],
-    liveLink: "#", // Replace with your live link or remove if not applicable
-    sourceLink: "#", // Replace with your GitHub link
+    liveLink: "#",
+    sourceLink: "#",
   },
   {
     title: "Project Beta",
     description:
       "A high-performance data processing service built with Java. It consumes messages from a Kafka queue, processes them, and stores the results in a NoSQL database.",
     techStack: ["Java", "Spring Boot", "Kafka", "MongoDB", "JUnit"],
-    sourceLink: "#", // Replace with your GitHub link
+    sourceLink: "#",
   },
   {
     title: "Project Gamma",

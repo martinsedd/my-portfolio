@@ -1,4 +1,3 @@
-/* src/components/ContactSection/ContactSection.css */
 .contact-section {
     padding: 4rem 2rem;
     background-color: var(--sumi-ink);
@@ -70,12 +69,11 @@
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    /* NEW: Added for icon alignment */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    min-width: 180px; /* Give it a fixed width to prevent size changes */
+    min-width: 180px;
 }
 
 .submit-button:hover:not(:disabled) {
@@ -83,7 +81,6 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* --- NEW: Styles for different form states --- */
 .submit-button:disabled {
     opacity: 0.7;
     cursor: not-allowed;
@@ -121,11 +118,10 @@
 }
 
 .error-message {
-    color: #f77aa2; /* A reddish color from the Kanagawa palette */
+    color: #f77aa2;
     font-weight: 500;
 }
 
-/* Responsive adjustment for smaller screens */
 @media (max-width: 600px) {
     .form-group {
         flex-direction: column;

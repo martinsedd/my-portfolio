@@ -1,15 +1,13 @@
-// src/components/ContactSection/ContactSection.tsx
 import { useState, type FormEvent } from "react";
 import "./ContactSection.css";
 
-// Define the possible states for our form
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
 const ContactSection = () => {
   const [status, setStatus] = useState<FormStatus>("idle");
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // Prevent the default page reload
+    event.preventDefault();
     setStatus("submitting");
 
     const formData = new FormData(event.target as HTMLFormElement);
@@ -19,24 +17,21 @@ const ContactSection = () => {
         method: "POST",
         body: formData,
         headers: {
-          Accept: "application/json", // Important for Formspree to send back JSON
+          Accept: "application/json",
         },
       });
 
       if (response.ok) {
         setStatus("success");
       } else {
-        // Handle server-side errors from Formspree
         setStatus("error");
       }
     } catch (error) {
-      // Handle network errors
       console.error("Form submission error:", error);
       setStatus("error");
     }
   };
 
-  // If the form was submitted successfully, show a thank you message
   if (status === "success") {
     return (
       <section id="contact" className="contact-section">
@@ -48,7 +43,6 @@ const ContactSection = () => {
     );
   }
 
-  // Otherwise, show the form
   return (
     <section id="contact" className="contact-section">
       <div className="contact-content">
@@ -102,7 +96,6 @@ const ContactSection = () => {
   );
 };
 
-// A simple spinner component for the loading state
 const Spinner = () => <div className="spinner"></div>;
 
 export default ContactSection;
